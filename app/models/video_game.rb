@@ -1,4 +1,4 @@
 class VideoGame < ApplicationRecord
-    belongs_to :store
-    has_many :customers
+    has_many :sales
+    has_many :customers, through: :sales
 end

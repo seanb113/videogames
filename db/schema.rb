@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_01_14_191521) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "stores", force: :cascade do |t|
+  create_table "sales", force: :cascade do |t|
     t.string "name"
     t.integer "video_game_id"
     t.integer "customer_id"

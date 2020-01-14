@@ -5,10 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-vg1 = VideoGame.new(title:"Nier", genre:"JRPG")
-vg2 = VideoGame.new(title:"Super Mario Galaxy", genre:"Platformer")
-vg3 = VideoGame.new(title:"Call of Duty", genre:"FPS")
+VideoGame.destroy_all
+Customer.destroy_all
 
-customer1 = Customer.new(name:"Jack Dee")
-customer2 = Customer.new(name:"Sean Locke")
-customer3 = Customer.new(name:"Jenny Gomez")
+
+vg1 = VideoGame.create(title: "Nier", genre:"JRPG")
+vg2 = VideoGame.create(title: "Super Mario Galaxy", genre:"Platformer")
+vg3 = VideoGame.create(title: "Call of Duty", genre:"FPS")
+
+customer1 = Customer.create(name:"Jack Dee")
+customer2 = Customer.create(name:"Sean Locke")
+customer3 = Customer.create(name:"Jenny Gomez")
+

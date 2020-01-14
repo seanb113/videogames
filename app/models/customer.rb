@@ -1,4 +1,4 @@
 class Customer < ApplicationRecord
-    belongs_to :store
-    has_many :video_games
+    has_many :sales
+    has_many :video_games, through: :sales
 end
