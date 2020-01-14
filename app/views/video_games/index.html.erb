@@ -1,0 +1,6 @@
+<h1>VideoGames</h1>
+
+<ul>
+<% @video_games.each do |vg| %>
+    <%= link_to video_game.title, video_game_path(vg) %>
+<% end %>
