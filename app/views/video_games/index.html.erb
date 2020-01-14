@@ -2,5 +2,7 @@
 
 <ul>
 <% @video_games.each do |vg| %>
-    <%= link_to video_game.title, video_game_path(vg) %>
+<ul>
+    <li><%= link_to vg.title, video_game_path(vg) %></li>
+</ul>
 <% end %>
