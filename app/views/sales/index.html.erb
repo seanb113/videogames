@@ -1,7 +1,7 @@
-<h1>Sales:</h1>
+<h1>Sales by date:</h1>
 
 <ol>
     <%@sales.each do |sale|%>
-        <li><%=sale.date%></li>
+        <li><%= link_to sale.date, sale_path(sale)%></li>
     <%end%>
 </ol>
