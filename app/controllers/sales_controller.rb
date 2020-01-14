@@ -8,6 +8,7 @@ class SalesController < ApplicationController
   end
 
   def new
+    @sale = Sale.new
   end
 
   def create

@@ -13,7 +13,7 @@ class VideoGamesController < ApplicationController
 
   def create
     @video_game = VideoGame.create(game_params)
-    redirect_to video_game_path
+    redirect_to video_game_path(@video_game)
   end
 
   def delete
@@ -25,6 +25,6 @@ class VideoGamesController < ApplicationController
   private
 
   def game_params
-    video_games.require(:video_game).permit(:title, :genre)
+    params.require(:video_game).permit(:title, :genre)
   end
 end

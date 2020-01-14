@@ -12,6 +12,8 @@ class CustomersController < ApplicationController
   end
 
   def create
+    @customer = Customer.create(customer_params)
+    redirect_to customer_path(@customer)
   end
 
   def delete
@@ -19,4 +21,11 @@ class CustomersController < ApplicationController
 
   def update
   end
+
+  private
+
+  def customer_params
+    params.require(:customer).permit!
+  end
+
 end
