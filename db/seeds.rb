@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 VideoGame.destroy_all
 Customer.destroy_all
+Sale.destroy_all
 
 
 vg1 = VideoGame.create(title: "Nier", genre:"JRPG")
@@ -17,4 +18,6 @@ customer1 = Customer.create(name:"Jack Dee")
 customer2 = Customer.create(name:"Sean Locke")
 customer3 = Customer.create(name:"Jenny Gomez")
 
-sale1 = Sale.create()
+sale1 = Sale.create(date: "June 5, 2020", video_game_id: vg1.id, customer_id: customer1.id)
+sale2 = Sale.create(date: "April 2, 2020", video_game_id: vg2.id, customer_id: customer2.id)
+sale3 = Sale.create(date: "January 5, 2020", video_game_id: vg3.id, customer_id: customer1.id)
