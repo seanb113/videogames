@@ -17,3 +17,4 @@ customer1 = Customer.create(name:"Jack Dee")
 customer2 = Customer.create(name:"Sean Locke")
 customer3 = Customer.create(name:"Jenny Gomez")
 
+sale1 = Sale.create()
